@@ -38,6 +38,9 @@
             background-color: green;
             padding: 10px 10px 10px 10px;
          }
+         ::selection{
+             background-color: yellow;
+         }
     </style>
 </head>
 <body>
@@ -50,29 +53,42 @@
             <li>we can style multiple elements with comma seperation like h1,h2,h3 {...}</li>
             <li>apply style to inside elemet of another element, like div p{....}</li>
             <li>Pseudo-classes,like  a:hover {.....}:
-                <ol>
-                    <li>:link</li>
-                    <li>:visited</li>
-                    <li>:hover</li>
-                    <li>:active</li>
-                    <li>:checked</li>
-                    <li>:disabled</li>
-                    <li>:enabled</li>
-                    <li>:first-child</li>
-                    <li>:last-child</li>
-                    <li>:first-of-type</li>
-                    <li>:last-of-type</li>
-                    <li>:focus</li>
-                    <li>:lang(language)</li>
-                    <li>:not(selector)</li>
-                    <li>:nth-child(n)</li>
-                    <li>:read-only</li>
-                    <li>:required</li>
-                    <li>More...</li>
-                </ol>
+                <ul>
+                    <li>Pseudo-classes
+                            <ol>
+                                    <li>:link</li>
+                                    <li>:visited</li>
+                                    <li>:hover</li>
+                                    <li>:active</li>
+                                    <li>:checked</li>
+                                    <li>:disabled</li>
+                                    <li>:enabled</li>
+                                    <li>:first-child</li>
+                                    <li>:last-child</li>
+                                    <li>:first-of-type</li>
+                                    <li>:last-of-type</li>
+                                    <li>:focus</li>
+                                    <li>:lang(language)</li>
+                                    <li>:not(selector)</li>
+                                    <li>:nth-child(n)</li>
+                                    <li>:read-only</li>
+                                    <li>:required</li>
+                                    <li>More...</li>
+                                </ol>
+                    </li>
+                    <li>Pseudo Elements:
+                            <ol>
+                                    <li>::after</li>
+                                    <li>::before</li>
+                                    <li>::first-letter</li>
+                                    <li>::first-line</li>
+                                    <li>::selection - see demo by selecting any content on page</li>
+                                </ol>
+                    </li>
+                </ul>
             </li>
             <li>each browder has its style to render to html , can be override those using *{...} </li>
-            <li>Nested , .page > p:first-if-type{}</li>
+            <li>Nested , .page > p:first-of-type{....}</li>
         </ul>
         <h4>Types:</h4>
         <ol>
@@ -80,9 +96,11 @@
             <li>class .demo{....}</li>
             <li>with element id #btnSubmitt{....}</li>
         </ol>
+        <hr/>
+        <h3>Block box and Inline box</h3>
         <p style="background-color: lightgrey;">
             the elements like &lt;p&gt;/&lt;div&gt; are called as <b>"block"</b> boxes which render w.r.t. parent size<br/>
-            the elements like &lt;b&gt;/&lt;i&gt; are <b>"inline"</b> boxes which independent of screen<br/>
+            the elements like &lt;b&gt;/&lt;i&gt; are <b>"inline"</b> boxes which independent of parent<br/>
             to make inline boxes render as block boxes we can use <b>display:block</b> style<br/>
 
         </p>
@@ -126,7 +144,7 @@
                  }<br/>
         </p>
         <div>
-            <p>some text asasasasasasasasasasasasasas</p>
+            <p>some text ......................</p>
         </div>
         <hr/>
 </body>
