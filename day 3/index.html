@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello CSS</title>
+    <style>
+        * {
+                margin: 15;
+                padding: 15;
+                box-sizing: border-box;
+            }
+
+        p {
+        background-color:grey;
+        padding: 10px 10px 10px 10px;
+        }
+        b{
+            background-color: lightgrey;
+        }
+        .button{
+            background-color: lightblue;
+            text-decoration:none;
+            border: 1px solid black;
+            width:300px;
+            text-align:center;
+            border-radius: 5px;
+            padding: 10px 10px 10px 10px;
+            box-sizing: border-box;
+        }
+        .button:hover{
+            background-color: blue;
+        }
+        div{
+            background-color: lightgreen;
+            padding: 10px 10px 10px 10px;
+        }
+         div p{
+            background-color: green;
+            padding: 10px 10px 10px 10px;
+         }
+    </style>
+</head>
+<body>
+        <h1>Learn CSS</h1>
+        <h4>Notes:</h4>
+        <ul>
+            <li>we can apply style with external file,&lt;style&gt; tag in &lt;head&gt; in page style and with inline "style" attribute</li>
+            <li>the order of the style is 1.inline 2.inpage style 3.external style file</li>
+            <li>we can apply multiple class selectors for element, in this if one property overrides last class style gets applied</li>
+            <li>we can style multiple elements with comma seperation like h1,h2,h3 {...}</li>
+            <li>apply style to inside elemet of another element, like div p{....}</li>
+            <li>apply style to inside elemet of another element, like div p{....}</li>
+            <li>Pseudo-classes,like  a:hover {.....}:
+                <ol>
+                    <li>:link</li>
+                    <li>:visited</li>
+                    <li>:hover</li>
+                    <li>:active</li>
+                    <li>:checked</li>
+                    <li>:disabled</li>
+                    <li>:enabled</li>
+                    <li>:first-child</li>
+                    <li>:last-child</li>
+                    <li>:first-of-type</li>
+                    <li>:last-of-type</li>
+                    <li>:focus</li>
+                    <li>:lang(language)</li>
+                    <li>:not(selector)</li>
+                    <li>:nth-child(n)</li>
+                    <li>:read-only</li>
+                    <li>:required</li>
+                    <li>More...</li>
+                </ol>
+            </li>
+            <li>each browder has its style to render to html , can be override those using *{...} </li>
+        </ul>
+        <h4>Types:</h4>
+        <ol>
+            <li>element h1{....}</li>
+            <li>class .demo{....}</li>
+            <li>with element id #btnSubmitt{....}</li>
+        </ol>
+        <p style="background-color: lightgrey;">
+            the elements like &lt;p&gt;/&lt;div&gt; are called as <b>"block"</b> boxes which render w.r.t. parent size<br/>
+            the elements like &lt;b&gt;/&lt;i&gt; are <b>"inline"</b> boxes which independent of screen<br/>
+            to make inline boxes render as block boxes we can use <b>display:block</b> style<br/>
+
+        </p>
+        <p>This is block box (like &lt;p&gt; &amp; &lt;div&gt;) <b>inline Box which is independent of parent width(like &lt;b&gt;)</b>  which render according parent size,occuipies whole width.</p>
+        <hr/>
+        <h3>Inline styling using style attribute</h3>
+        <p style="background-color: lightgrey;">&lt;p style="background-color: greenyellow"&gt;.......&lt;/p&gt;</p>
+        <p style="background-color: greenyellow">Inline styling using (style) attribute </p>
+        <hr/>
+        <h3>Selector classes and Pseudo-classes</h3>
+        <p style="background-color: lightgrey;">
+                .button{/* class */<br/>
+                    background-color: lightblue;<br/>
+                    text-decoration:none;<br/>
+                    border: 1px solid black;<br/>
+                    border-radius: 5px;<br/>
+                    padding: 10px 10px 10px 10px;<br/>
+                    width:200px;<br/>
+                    text:align:center;<br/>
+                    box-sizing: border-box;<br/>  
+                }<br/>
+                .button:hover{/* pseudo-class */<br/>
+                    background-color: blue;<br/>
+                }<br/> 
+                Display div as button using .button class <br/>
+                box-sizing: border-box is use to force the elements to apply exact widht assigned<br/>
+                if box-sizing: content-box(default value) is then element use assigned wdith + boarder width<br/>
+                in this case value would be 200px + 2px = 202px<br/> 
+        </p>
+        <div class="button">Button</div>
+        <hr/>
+        <h3>Descendant Selectors</h3>
+        <p style="background-color: lightgrey;">
+                div{<br/>
+                    background-color: lightgreen;<br/>
+                    padding: 10px 10px 10px 10px;<br/>
+                }<br/>
+                 div p{ /* descendant selector */<br/>
+                    background-color: green;<br/>
+                    padding: 10px 10px 10px 10px;<br/>
+                 }<br/>
+        </p>
+        <div>
+            <p>some text asasasasasasasasasasasasasas</p>
+        </div>
+        <hr/>
+</body>
+
+</html>
